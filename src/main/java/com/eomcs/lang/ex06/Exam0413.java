@@ -14,6 +14,7 @@ public class Exam0413 {
         break;
       System.out.println(i);
       i++;
+      //내 생각에는 1~4까지 왜 5가 나오는지 모르겠다. i>5이기에
     }
 
   }

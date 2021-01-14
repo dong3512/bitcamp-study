@@ -7,8 +7,12 @@ public class Exam0630 {
     int i = 7;
 
     int j = i++;
-    
-// 위 문장은 컴파일될 때 다음과 같은 형태로 변환된다.
+
+    // 위 문장은 컴파일될 때 다음과 같은 형태로 변환된다.
+    // int temp = i;
+    // i = i + 1;
+    // int j =temp;
+
     // => int j;
     // => int temp;
     // => temp = i;
