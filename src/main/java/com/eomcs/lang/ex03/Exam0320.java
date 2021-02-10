@@ -4,7 +4,7 @@ package com.eomcs.lang.ex03;
 
 public class Exam0320 {
   public static void main(String[] args) {
-
+    
     //## 8바이트 크기의 부동소수점
     //- 숫자 맨 뒤에 d 또는 D를 붙인다.
     //- 생략해도 된다.
@@ -16,12 +16,6 @@ public class Exam0320 {
     //- 숫자 맨 뒤에 f 또는 F를 붙인다.
     System.out.println(3.14f); // 주로 소문자 f를 많이 붙인다.
     System.out.println(3.14F);
-
-    float f1 = 3456.789f;
-
-    System.out.println(3456.789f);
-    System.out.println(34.56789f);
-    System.out.println(456782.3456789f);
   }
 }
 
