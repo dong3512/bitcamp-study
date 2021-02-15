@@ -12,4 +12,5 @@ public class Exam0310 {
   class B2 {}
   protected class B3 {}
   public class B4 {}
+
 }

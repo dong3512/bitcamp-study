@@ -51,6 +51,7 @@ public class Exam0340 {
         //
         System.out.printf("%s님이 달립니다!", name);
 
+
         // 위 문장은 다음과 같이
         // 컴파일러가 로컬 클래스의 필드(예: paramName)를 사용하는 문장으로 바꾼다.
         // 그래서 createRunner() 메서드 호출이 끝나더라도

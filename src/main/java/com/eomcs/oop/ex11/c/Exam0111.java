@@ -18,10 +18,12 @@ class A2 {
 public class Exam0111 {
   public static void main(String[] args) {
 
-    //    A2 outer = new A2();
-    //    A2.X obj = outer.new X();
+    // 바깥 클래스의 인스턴스를 먼저 만든 다음에
+    // inner 클래스의 인스턴스를 만든다.
+    A2 outer = new A2();
+    A2.X obj = outer.new X();
 
     // 위의 두 줄을 다음 한 줄로 표현할 수 있다.
-    A2.X obj = new A2().new X();
+    A2.X obj2 = new A2().new X();
   }
 }
