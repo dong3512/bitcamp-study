@@ -8,6 +8,10 @@ public class Exam0112 {
     String s2 = "Hello";
 
     // 문자열 리터럴이 String 객체인지 확인해보자.
+<<<<<<< HEAD
+=======
+    System.out.println(s1 == s2);
+>>>>>>> 5215881aba7260f9ada34bd7e8e91b6648c42cb7
     System.out.println(s1 instanceof String);
     System.out.println(s2 instanceof String);
   }

@@ -1,8 +1,14 @@
 // Object 클래스 - clone() 사용법 III
 package com.eomcs.basic.ex01;
+<<<<<<< HEAD
  
 public class Exam0172 {
   
+=======
+
+public class Exam0172 {
+
+>>>>>>> 5215881aba7260f9ada34bd7e8e91b6648c42cb7
   // 인스턴스 복제 기능을 활성화하려면 Cloneable 인터페이스를 구현해야 한다.
   // => 이 인터페이스에는 메서드가 선언되어 있지 않다.
   // => 따라서 클래스는 따로 메서드를 구현할 필요가 없다.
@@ -16,9 +22,15 @@ public class Exam0172 {
     int math;
     int sum;
     float aver;
+<<<<<<< HEAD
     
     public Score() {}
     
+=======
+
+    public Score() {}
+
+>>>>>>> 5215881aba7260f9ada34bd7e8e91b6648c42cb7
     public Score(String name, int kor, int eng, int math) {
       this.name = name;
       this.kor = kor;
@@ -33,6 +45,7 @@ public class Exam0172 {
       return "Score [name=" + name + ", kor=" + kor + ", eng=" + eng + ", math=" + math + ", sum="
           + sum + ", aver=" + aver + "]";
     }
+<<<<<<< HEAD
     
     @Override
     public Score clone() throws CloneNotSupportedException {
@@ -42,6 +55,18 @@ public class Exam0172 {
   
   public static void main(String[] args) throws Exception {
     
+=======
+
+    @Override
+    public Score clone() throws CloneNotSupportedException {
+      // Object의 clone() 메서드는 Heap의 존재하는 인스턴스 변수들을 그대로 복제한다.
+      return (Score) super.clone();
+    }
+  }
+
+  public static void main(String[] args) throws Exception {
+
+>>>>>>> 5215881aba7260f9ada34bd7e8e91b6648c42cb7
     Score s1 = new Score("홍길동", 100, 100, 100);
     Score s2 = s1.clone(); // 이제 예외가 발생하지 않는다!
     // 복제 실행 오류가 발생하지 않는 이유?

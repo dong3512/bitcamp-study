@@ -7,17 +7,11 @@ public class Exam0630 {
     int i = 7;
 
     int j = i++;
-
+    
     // 위 문장은 컴파일될 때 다음과 같은 형태로 변환된다.
     // int temp = i;
     // i = i + 1;
-    // int j =temp;
-
-    // => int j;
-    // => int temp;
-    // => temp = i;
-    // => i = i + 1;
-    // => j = temp;
+    // int j = temp;
     //
     // 소스 코드 그대로 설명하면 다음과 같이 설명할 수 있다.
     // 그러나 가능한 컴파일 후에 변환된 코드를 그대로 이해하는 게 더 낫다.

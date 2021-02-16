@@ -2,6 +2,10 @@
 package com.eomcs.basic.ex02;
 
 public class Exam0230 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5215881aba7260f9ada34bd7e8e91b6648c42cb7
   public static void main(String[] args) {
 
     // new 명령을 사용하여 Integer 객체를 만들면

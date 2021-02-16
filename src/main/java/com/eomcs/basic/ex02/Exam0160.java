@@ -11,6 +11,10 @@ public class Exam0160 {
     // String 클래스의 메서드는 원본 인스턴스의 데이터를 변경하지 않는다. 
     // 다만 새로 String 객체를 만들 뿐이다.
     String s2 = s1.replace('l', 'x');
+<<<<<<< HEAD
+=======
+    System.out.println(s1 == s2);
+>>>>>>> 5215881aba7260f9ada34bd7e8e91b6648c42cb7
     System.out.printf("%s : %s\n", s1, s2); // 원본은 바뀌지 않는다.
 
     String s3 = s1.concat(", world!");
