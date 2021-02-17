@@ -1,9 +1,10 @@
-// 목록조회: 반목문과 
+// 목록 조회: java.util.Collection의 forEach() 사용법
 package com.eomcs.basic.ex03;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 
-public class Exam0210 {
+public class Exam0241 {
   public static void main(String[] args) {
 
     class Member {
@@ -58,8 +59,16 @@ public class Exam0210 {
     list.add(m2);
     list.add(m3);
 
-    for (int i = 0; i < list.size(); i++) {
-      System.out.println(list.get(i));
-    }
+    Consumer <Member> action = new Consumer<>(){
+      @Override
+      public void accept(Member m) {
+        // forEach() 에서 반복문을 돌릴 때
+        // Consumer 규칙에 따라 
+        // 각 항목에 대해 이 메서드를 호출한다.
+        System.out.printf("이름: %s, 나이: %d\n", m.name, m.age);
+      };
+    };
+
+    list.forEach(action);
   }
 }

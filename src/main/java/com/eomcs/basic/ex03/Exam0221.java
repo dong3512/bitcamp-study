@@ -1,9 +1,9 @@
-// 목록조회: 반목문과 
+// 목록조회: toArray()사용
 package com.eomcs.basic.ex03;
 
 import java.util.ArrayList;
 
-public class Exam0210 {
+public class Exam0221 {
   public static void main(String[] args) {
 
     class Member {
@@ -58,8 +58,10 @@ public class Exam0210 {
     list.add(m2);
     list.add(m3);
 
-    for (int i = 0; i < list.size(); i++) {
-      System.out.println(list.get(i));
+    Object[] arr = list.toArray();
+    for (Object obj : arr) {
+      Member m = (Member) obj;
+      System.out.printf("이름: %s, 나이: %d\n", m.name, m.age);
     }
   }
 }

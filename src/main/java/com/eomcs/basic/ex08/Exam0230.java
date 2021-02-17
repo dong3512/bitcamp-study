@@ -15,6 +15,8 @@ public class Exam0230 {
     map.put("s04", new Member("안중근", 20));
     map.put("s05", new Member("윤봉길", 30));
 
+    Set<Entry<String,Member>> set = map.entrySet();    
+
     Set<Entry<String,Member>> entrySet = map.entrySet();
     // key,value가 한쌍으로 묶여있는 객체들이 들어있다.
 

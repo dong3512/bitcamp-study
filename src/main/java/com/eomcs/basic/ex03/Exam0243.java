@@ -1,9 +1,9 @@
-// 목록조회: 반목문과 
+// 목록 조회: java.util.Collection의 forEach() 사용법
 package com.eomcs.basic.ex03;
 
 import java.util.ArrayList;
 
-public class Exam0210 {
+public class Exam0243 {
   public static void main(String[] args) {
 
     class Member {
@@ -58,8 +58,7 @@ public class Exam0210 {
     list.add(m2);
     list.add(m3);
 
-    for (int i = 0; i < list.size(); i++) {
-      System.out.println(list.get(i));
-    }
+    // lambda 문법으로 Consumer 구현체 만들기
+    list.forEach(m -> System.out.printf("이름: %s, 나이: %d\n", m.name, m.age));
   }
 }

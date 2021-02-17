@@ -1,9 +1,10 @@
-// 목록조회: 반목문과 
+// 목록 조회: Iterator 사용
 package com.eomcs.basic.ex03;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Exam0210 {
+public class Exam0230 {
   public static void main(String[] args) {
 
     class Member {
@@ -58,8 +59,10 @@ public class Exam0210 {
     list.add(m2);
     list.add(m3);
 
-    for (int i = 0; i < list.size(); i++) {
-      System.out.println(list.get(i));
+    Iterator<Member> iterator = list.iterator();
+    while (iterator.hasNext()) {
+      Member m =
+          System.out.printf("이름: %s, 나이: %d\n", m.name, m.age);
     }
   }
 }

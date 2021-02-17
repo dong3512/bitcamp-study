@@ -1,9 +1,10 @@
-// java.util.Collection의 forEach() 사용법
+// 목록 조회: java.util.Collection의 forEach() 사용법
 package com.eomcs.basic.ex03;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 
-public class Exam0310 {
+public class Exam0242 {
   public static void main(String[] args) {
 
     class Member {
@@ -58,8 +59,11 @@ public class Exam0310 {
     list.add(m2);
     list.add(m3);
 
-    list.forEach(item -> {
-      System.out.println(item);
+    list.forEach(new Consumer<>(){
+      @Override
+      public void accept(Member m) {
+        System.out.printf("이름: %s, 나이: %d\n", m.name, m.age);
+      };
     });
   }
 }
