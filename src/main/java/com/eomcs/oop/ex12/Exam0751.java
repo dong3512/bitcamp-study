@@ -3,7 +3,6 @@ package com.eomcs.oop.ex12;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.function.Supplier;
 
@@ -33,6 +32,7 @@ public class Exam0751 {
         return (T) new ArrayList<>();
       }
     };
+
     Supplier<Collection<String>> supplier = new MySupplier<Collection<String>>();
     Collection<String> list = prepareNames(supplier, "홍길동", "임꺽정", "유관순", "임꺽정");
     print(list.iterator());

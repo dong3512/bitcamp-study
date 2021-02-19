@@ -38,6 +38,7 @@ public class Exam0620 {
 
     // 위의 코드는 내부적으로 다음과 같다.
     //
+
     Interest i1 = new Interest() {
       @Override
       public double compute(int money) {

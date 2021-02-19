@@ -22,7 +22,7 @@ public class Exam0520 {
     }
   }
 
-  static interface Calculator {
+  interface Calculator {
     int compute(int a, int b);
   }
 

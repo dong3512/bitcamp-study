@@ -40,6 +40,14 @@ public class Exam0740 {
     //=> 즉 컴파일러는 Message 의 생성자 중에서 
     //   String을 파라미터 받는 생성자를 호출하는 Factory 구현체를 만들어 리턴한다.
 
+    //    Factory2 f2x = new Factory2() {
+    //      
+    //      @Override
+    //      public Message get(String name) {
+    //        // TODO Auto-generated method stub
+    //        return null;
+    //      }
+    //    };
     // Factory(String,int) 생성자가 없기 때문에 컴파일 오류!
     //    Factory3 f3 = Message::new; // 컴파일 오류!
     //=> 즉 컴파일러는 Message 의 생성자 중에서 
