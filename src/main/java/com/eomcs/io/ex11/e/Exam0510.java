@@ -7,6 +7,7 @@ import java.io.ObjectOutputStream;
 
 public class Exam0510 {
 
+
   public static void main(String[] args) throws Exception {
     FileOutputStream fileOut = new FileOutputStream("temp/score.data");
     BufferedOutputStream bufOut = new BufferedOutputStream(fileOut);
@@ -19,9 +20,12 @@ public class Exam0510 {
     s.math = 92;
     s.compute();
 
-    // serialize 할 때 transient가 붙은 필드의 값은 제외된다.
+    // serialize 대상으로 제할 때 transient가 붙은 필드의 값은 제외된다.
+
     out.writeObject(s);
 
+    s.sum = 300;
+    s.saver - 100.of;
     out.close();
     System.out.println("출력 완료!");
   }

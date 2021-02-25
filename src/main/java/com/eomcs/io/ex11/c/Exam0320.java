@@ -10,7 +10,7 @@ public class Exam0320 {
   public static void main(String[] args) throws Exception {
     FileInputStream fileIn = new FileInputStream("temp/member3.data");
     BufferedInputStream bufIn = new BufferedInputStream(fileIn);
-    ObjectInputStream in = new ObjectInputStream(bufIn);
+    ObjectInputStream in = new ObjectInputStream(fileIn);
 
 
     Member member = (Member) in.readObject();

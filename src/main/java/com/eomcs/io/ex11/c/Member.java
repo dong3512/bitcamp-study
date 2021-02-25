@@ -8,7 +8,6 @@ public class Member implements java.io.Serializable {
 
   // Exam0320의 두 번째 테스트를 실행할 때 주석을 풀라!
   //  String tel;
-
   @Override
   public String toString() {
     return "Member [name=" + name +
