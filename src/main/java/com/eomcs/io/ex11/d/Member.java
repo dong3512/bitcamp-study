@@ -4,9 +4,9 @@ public class Member implements java.io.Serializable {
 
   // java.io.Serializable 인터페이스를 구현하는 클래스는
   // 항상 serialVersionUID 라는 스태틱 상수를 가져야 한다.
-  // 이 변수는 인스턴스를 serialize 하고 deserialize 할 때
-  // 인스턴스 형식에 대한 검증번호로 사용된다.
-  // 이 값을 가지고 serialize 된 인스턴스값을
+  // 이 변수는 인스턴스를 serialize 하고 deserialize 할 때 
+  // 인스턴스 형식에 대한 검증 번호로 사용된다.
+  // 이 값을 가지고 serialize 된 인스턴스의 값을 
   // 읽을 수 있는지 없는지 판단한다.
   //
   // 다음과 같이 개발자가 버전 번호를 직접 명시할 수 있다.
@@ -33,7 +33,7 @@ public class Member implements java.io.Serializable {
   boolean gender; // true(여자), false(남자)
 
   // Exam0420의 두 번째 테스트를 실행할 때 주석을 풀라!
-  String tel;
+  //  String tel;
 
   @Override
   public String toString() {
@@ -42,7 +42,7 @@ public class Member implements java.io.Serializable {
         ", age=" + age +
         ", gender=" + gender +
         // Exam0420의 두 번째 테스트를 실행할 때 주석을 풀라!
-        ", tel=" + tel +
+        //        ", tel=" + tel +
         "]";
   }
 }

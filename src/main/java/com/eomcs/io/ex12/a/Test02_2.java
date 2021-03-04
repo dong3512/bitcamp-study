@@ -13,7 +13,6 @@ public class Test02_2 {
     // => java.io.BufferedInputStream 클래스를 사용하라.
     // => java.io.DataInputStream 클래스를 사용하라.
     //
-
     FileInputStream in0 = new FileInputStream("temp/score.data");
     BufferedInputStream in1 = new BufferedInputStream(in0);
     DataInputStream in = new DataInputStream(in1);
