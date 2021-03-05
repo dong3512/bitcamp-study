@@ -21,7 +21,7 @@ public class CalcClient {
       System.out.print("값? ");
       int value = Integer.parseInt(keyScan.nextLine());
 
-      try (Socket socket = new Socket("localhost", 8888);
+      try (Socket socket = new Socket("192.168.0.67", 8888);
           DataOutputStream out = new DataOutputStream(socket.getOutputStream());
           DataInputStream in = new DataInputStream(socket.getInputStream())) {
 
@@ -37,8 +37,7 @@ public class CalcClient {
         clientId = in.readLong();
 
         // => 서버에서 보낸 결과를 읽는다.
-        int result = in.readInt();
-        System.out.printf("계산 결과: %d\n", result);
+        System.out.println(in.readUTF());
 
       } catch (Exception e) {
         System.out.println("서버와 통신 중 오류 발생!");

@@ -14,8 +14,8 @@ public class Sender {
     // => 서버와 연결되면 Socket 객체가 생성된다.
     // => 서버와 연결될 때까지 리턴하지 않는다.
     // => 서버에 연결할 수 없으면 예외가 발생한다.
-    // => localhost = 127.0.0.1 : 현재 컴퓨터를 가리킨다.
-    Socket socket = new Socket("192.168.0.147", 8888);
+    // => localhost == 127.0.0.1 : 현재 컴퓨터를 가리킨다.
+    Socket socket = new Socket("localhost", 8888);
     System.out.println("서버와 연결된 Socket 생성!");
 
     // 2) 소켓 객체를 통해 읽고 쓸 수 있도록 입출력 스트림을 얻는다.

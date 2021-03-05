@@ -3,7 +3,6 @@ package com.eomcs.net.ex03;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
@@ -18,9 +17,6 @@ public class Server0140 {
       try (Socket socket = serverSocket.accept();
           DataOutputStream out = new DataOutputStream(socket.getOutputStream());
           DataInputStream in = new DataInputStream(socket.getInputStream())) {
-
-        InetSocketAddress addr = (InetSocketAddress) socket.getRemoteSocketAddress();
-        System.out.println(addr.getAddress());
 
         System.out.println("클라이언트가 보낸 Data를 기다리고 있음!");
 

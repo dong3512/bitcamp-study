@@ -15,13 +15,14 @@ public class Sender4 {
     FileInputStream fileIn = new FileInputStream(file);
 
     System.out.println("서버에 연결 중...");
-    Socket socket = new Socket("192.168.0.147", 8888);
+    Socket socket = new Socket("192.168.0.61", 8888);
     System.out.println("서버에 연결 완료!");
 
     DataOutputStream out = new DataOutputStream(socket.getOutputStream());
     Scanner in = new Scanner(socket.getInputStream());
 
     System.out.println("서버에 데이터 송신 중...");
+
     long startTime = System.currentTimeMillis();
 
     // 1) 파일 크기 보내기
