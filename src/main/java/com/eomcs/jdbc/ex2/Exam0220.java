@@ -71,8 +71,8 @@ public class Exam0220 {
       //
       // 2) SQL 삽입 공격
       // [Statement]
-      // - 사용자가 입력한 값을 가지고 SQL 문장을 만들기 때문에 해킹되기 쉽다.
-      // [PreparedStatement]
+      // - 사용자가 입력한 값을 가지문장을 만들기 때문에 해킹되기 쉽다.
+      // [PreparedStatement]고 SQL 
       // - SQL 문장과 값이 분리되어 다뤄지기 때문에 해킹할 수 없다.
       //
       // 3) 바이너리 데이터 다루기
@@ -92,8 +92,7 @@ public class Exam0220 {
       // - 미리 SQL 문을 작성한 다음 DBMS 프로토콜에 맞게 파싱해 놓은 후,
       //   executeUpdate() 호출한다.
       // - 따라서 executeUpdate()를 호출할 때 마다 SQL 문법을
-      //   분석하기 않으므로 반복
-      //   실행하는 경우, Statement 보다 빠르다.
+      //   분석하기 않으므로 반복해서 실행하는 경우, Statement 보다 빠르다.
       //
     }
   }
