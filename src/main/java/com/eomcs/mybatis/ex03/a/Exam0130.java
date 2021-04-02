@@ -1,6 +1,6 @@
-// SqlSession 사용법 - select 문 실행하기 : 목록 출력
+// SQL 문에 삽입할 파라미터 전달하기 -  CDATA 섹션을 사용할 때 : [!CDATA[ SQL 문 []]>
 
-package com.eomcs.mybatis.ex02.b;
+package com.eomcs.mybatis.ex03.a;
 
 import java.util.List;
 import org.apache.ibatis.io.Resources;
@@ -8,18 +8,15 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import com.eomcs.mybatis.vo.Board;
 
-public class Exam0110 {
+public class Exam0130 {
 
   public static void main(String[] args) throws Exception {
     SqlSession sqlSession = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream(
-        "com/eomcs/mybatis/ex02/b/mybatis-config.xml")).openSession();
+        "com/eomcs/mybatis/ex03/a/mybatis-config.xml")).openSession();
 
-    // selectList()
-    // => select 문의 결과가 여러 개일 때 사용한다.
-    // => 결과가 없으면 size가 0인 List 객체를 리턴한다.
-    //
-    List<Board> boards = sqlSession.selectList("BoardMapper.selectBoard");
+    List<Board> boards = sqlSession.selectList("BoardMapper.selectBoard3", 4);
 
+    // 컬럼명과 자바 객체의 프로퍼티명이 일치한다면 다음과 같이 정상적으로 데이터를 꺼내 올 수 있다.
     for (Board b : boards) {
       System.out.printf("%d,%s,%s,%s,%d\n",
           b.getNo(),
@@ -30,6 +27,7 @@ public class Exam0110 {
     }
 
     sqlSession.close();
+    System.out.println("실행완료!");
   }
 
 }
