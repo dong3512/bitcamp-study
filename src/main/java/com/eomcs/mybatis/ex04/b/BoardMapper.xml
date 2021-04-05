@@ -12,7 +12,9 @@
     <result column="view_count" property="viewCount"/>
   </resultMap>
   
-  <select id="selectBoard1" resultMap="BoardMap" parameterType="String">
+  <!-- 제목으로 게시글 찾기
+  -->
+  <select id="select1" resultMap="BoardMap" parameterType="string">
     select 
       board_id,
       title,
@@ -20,10 +22,11 @@
       created_date,
       view_count
     from x_board
-    order by board_id #{sortType}
+    where title like concat('%', #{value}, '%')
+    order by board_id desc
   </select>
-  
-  <select id="selectBoard2" resultMap="BoardMap" parameterType="String">
+  <!-- 내용으로 게시글 찾기 -->
+   <select id="select2" resultMap="BoardMap" parameterType="string">
     select 
       board_id,
       title,
@@ -31,10 +34,12 @@
       created_date,
       view_count
     from x_board
-    order by board_id ${sortType}
+    where contents like concat('%', #{value}, '%')
+    order by board_id desc
   </select>
+  <!-- if 태그를 사용하면 값의 유무에 따라 SQL 문을 제어 할 수 있다. -->
   
-  <select id="selectBoard3" resultMap="BoardMap" parameterType="String">
+     <select id="select3" resultMap="BoardMap" parameterType="map">
     select 
       board_id,
       title,
@@ -42,24 +47,15 @@
       created_date,
       view_count
     from x_board
-    order by ${sort}
+    where 
+      <if test="menuNo == 1">
+      title like concat('%', #{keyword}, '%')
+      </if>
+      <if test="menuNo == 2">
+     contents like concat('%', #{keyword}, '%')
+     </if>
+    order by board_id desc
   </select>
-  
-    <select id="countRecords" resultType="int" parameterType="String">
-    select 
-      count(*)
-    from ${tableName}
-  </select>
-  
-  <delete id="delete1" parameterType="string">
-    delete from x_board
-    where title = #{value}
-  </delete>
-  
-  <delete id="delete2" parameterType="string">
-    delete from x_board
-    where ${condition}
-  </delete>
   
 </mapper>
 
