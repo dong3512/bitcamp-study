@@ -1,5 +1,4 @@
-// SqlSession 사용법 - select 문 실행하기 : 자바객체의 프로퍼티 이름과 컬렴명 일치시키기
-
+// SqlSession 사용법 - select 문 실행하기 : 자바 객체의 프로퍼티 이름과 컬럼명을 일치시키기
 package com.eomcs.mybatis.ex02.c;
 
 import java.util.List;
@@ -16,7 +15,7 @@ public class Exam0110 {
 
     List<Board> boards = sqlSession.selectList("BoardMapper.selectBoard");
 
-    // 컬럼명과 자바 객체의 프로퍼티명이 일치한다면 다음과 같이 정상적으로 데이터를 꺼내 올 수 있다.
+    // 컬러몀과 자바 객체의 프로퍼티명이 일치한다면 다음과 같이 정상적으로 데이터를 꺼내올 수 있다.
     for (Board b : boards) {
       System.out.printf("%d,%s,%s,%s,%d\n",
           b.getNo(),
@@ -31,4 +30,19 @@ public class Exam0110 {
 
 }
 
+//컬럼 이름과 자바 객체의 프로퍼티 이름을 같게 하기
+//---------------------------------------------------------------------
+//<select id="selectBoard" resultType="com.eomcs.mybatis.ex01.Board">
+//  select
+//    board_id as no,
+//    title,
+//    contents as content,
+//    created_date as registeredDate,
+//    view_count as viewCount
+//  from x_board
+//</select>
+//---------------------------------------------------------------------
+//=> 컬럼의 값을 자바 객체에 담으려면 컬럼과 같은 이름의 프로퍼티가 있어야 한다.
+//=> 없다면 위와 같이 프로퍼티 명을 컬럼의 별명으로 지정하라.
+//
 

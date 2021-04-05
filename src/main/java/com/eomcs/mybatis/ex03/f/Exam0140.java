@@ -1,4 +1,4 @@
-// #{} 과 ${} 차이점 => ${} 문법의 활용 II
+// #{} 과 ${} 차이점 => ${} 문법의 쓰임새 III
 package com.eomcs.mybatis.ex03.f;
 
 import org.apache.ibatis.io.Resources;
@@ -13,7 +13,7 @@ public class Exam0140 {
 
     // 정렬 방식을 파라미터로 넘기기
     // => ${} 문법은 파라미터 값을 SQL 문에 그대로 삽입한다.
-    // 
+    //
     int count = sqlSession.selectOne("BoardMapper.countRecords", "x_board");
 
     System.out.println(count);

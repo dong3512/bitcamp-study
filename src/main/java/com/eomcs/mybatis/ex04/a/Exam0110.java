@@ -1,4 +1,4 @@
-// Dynamic SQL 
+// SQL 태그 사용법 (사용 전)
 package com.eomcs.mybatis.ex04.a;
 
 import java.util.List;
@@ -16,7 +16,7 @@ public class Exam0110 {
     System.out.print("검색 항목:\n  1. 제목\n  2. 내용\n검색 항목? ");
     int menuNo = Integer.parseInt(keyboard.nextLine());
 
-    if (!(menuNo == 1 | menuNo == 2)) {
+    if (!(menuNo == 1 || menuNo == 2)) {
       System.out.println("검색 항목 번호가 옳지 않습니다.");
       keyboard.close();
       return;

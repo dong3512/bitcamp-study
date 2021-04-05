@@ -26,12 +26,11 @@ public class Exam0110 {
 
     List<Board> boards = null;
 
-    // 검색 항목 선택에 따라 SQL 문이 달라지기 때문에
+    // 검색 항목 선택에 따라 SQL 문이 달라지기 때문에 
     // 다음과 같이 where 절의 일부분만 다른,
-    // SQL문을 여거 개 작성해야 한다.
-    // 그리고 조건에 따라 호출할 SQL 문을 구분해서 호출해야 한다.
-    //
-
+    // SQL문을 여러 개 작성해야 한다.
+    // 그리고 조건에 따라 실행할 SQL 문을 구분해서 호출해야 한다.
+    // 
     if (menuNo == 1) {
       boards = sqlSession.selectList("BoardMapper.select1", keyword);
     } else if (menuNo == 2) {

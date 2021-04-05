@@ -25,11 +25,10 @@ public class Exam0120 {
     SqlSession sqlSession = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream(
         "com/eomcs/mybatis/ex04/b/mybatis-config.xml")).openSession();
 
-
-    // if 태그를 사용하면 조건에 따라 SQL 문을 변경 할 수 있다.
-    // => SQL 문이 고정되는것이 아니라 변경될 수 있는 것을
+    // if 태그를 사용하면 조건에 따라 SQL 문을 변경할 수 있다.
+    // => SQL 문이 고정되는 것이 아니라 변경될 수 있는 것을 
     //    'Dynamic SQL' 이라고 한다.
-    //
+    // 
     HashMap<String,Object> params = new HashMap<>();
     params.put("menuNo", menuNo);
     params.put("keyword", keyword);

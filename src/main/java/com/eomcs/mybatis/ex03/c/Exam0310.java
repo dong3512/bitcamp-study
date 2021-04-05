@@ -1,4 +1,4 @@
-// update 문 실행 - Board 객체에 값을 담아 파라미터로 넘기기
+// delete 문 실행
 package com.eomcs.mybatis.ex03.c;
 
 import org.apache.ibatis.io.Resources;
@@ -14,19 +14,17 @@ public class Exam0310 {
     // delete 문을 실행할 때는 delete() 메서드를 호출한다.
     // - 리턴 값은 executeUpdate()의 실행 결과이다.
     // - 즉 delete 된 데이터의 개수이다.
-
-    // 예) 게시글을 입력한다.
-
-    int count = sqlSession.delete("BoardMapper.delete", 6);
-    System.out.printf("%d 개의 데이터를 삭제 했음!", count);
+    //
+    // 예) 게시글을 삭제한다.
+    //
+    int count = sqlSession.delete("BoardMapper.delete", 10);
+    System.out.printf("%d 개의 데이터를 삭제 했음!\n", count);
 
     sqlSession.commit();
 
-    // 용어정리 
     sqlSession.close();
+
     System.out.println("실행 완료!");
-
-
   }
 
 }

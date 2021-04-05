@@ -1,4 +1,4 @@
-// #{} 과 ${} 차이점 => ${} 문법의 활용
+// #{} 과 ${} 차이점 => ${} 문법의 쓰임새
 package com.eomcs.mybatis.ex03.f;
 
 import java.util.List;
@@ -15,8 +15,8 @@ public class Exam0120 {
 
     // 정렬 방식을 파라미터로 넘기기
     // => ${} 문법은 파라미터 값을 SQL 문에 그대로 삽입한다.
-    // 
-    List<Board> boards = sqlSession.selectList("BoardMapper.selectBoard2", "asc");
+    //
+    List<Board> boards = sqlSession.selectList("BoardMapper.selectBoard2", "desc");
 
     for (Board b : boards) {
       System.out.printf("%d,%s,%s,%s,%d\n",
