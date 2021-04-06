@@ -11,7 +11,6 @@ import com.eomcs.mybatis.vo.Board;
 public class Exam0130 {
 
   public static void main(String[] args) throws Exception {
-
     SqlSession sqlSession = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream(
         "com/eomcs/mybatis/ex05/a/mybatis-config.xml")).openSession();
 
@@ -22,7 +21,6 @@ public class Exam0130 {
     List<Board> boards = sqlSession.selectList("BoardMapper.selectBoard2");
 
     for (Board b : boards) {
-      System.out.println("[게시글 상세보기]");
       System.out.printf("번호: %d\n", b.getNo());
       System.out.printf("제목: %s\n", b.getTitle());
       System.out.printf("내용: %s\n", b.getContent());
@@ -31,10 +29,9 @@ public class Exam0130 {
 
       System.out.println("첨부파일:");
 
-
       if (b.getAttachFiles().size() == 1 &&
           b.getAttachFiles().get(0).getFileNo() == 0) {
-        System.out.println("  첨부파일이 없습니다.");
+        System.out.println("  첨부파일이 없습니다!");
         continue;
       }
 
@@ -42,7 +39,7 @@ public class Exam0130 {
         System.out.printf("  %d - %s\n", f.getFileNo(), f.getFilePath());
       }
 
-      System.out.println("-----------------------------------");
+      System.out.println("-----------------------------------------------------");
     }
     sqlSession.close();
   }
